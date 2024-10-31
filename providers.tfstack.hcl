@@ -21,14 +21,14 @@ provider "random" "main" {}
 provider "azurerm" "main" {
   config {
     features {}
-    use_cli              = false
-    use_oidc             = true
+    use_cli          = false
+    use_oidc         = true
 
-    oidc_token_file_path = var.identity_token_file
+    oidc_token       = var.identity_token
 
-    subscription_id      = var.azure_subscription_id
-    tenant_id            = var.azure_tenant_id
-    client_id            = var.azure_client_id
+    subscription_id  = var.azure_subscription_id
+    tenant_id        = var.azure_tenant_id
+    client_id        = var.azure_client_id
   }
 }
 

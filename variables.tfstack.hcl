@@ -13,7 +13,11 @@ variable "location" {
   type = string
 }
 
-variable "identity_token_file" {
+# variable "identity_token_file" {
+#   type = string
+# }
+
+variable "identity_token" {
   type = string
 }
 

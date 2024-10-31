@@ -18,7 +18,6 @@ deployment "dev" {
     location              = "eastus2"
 
     identity_token        = identity_token.azurerm.jwt
-    # identity_token_file   = identity_token.azure.jwt_filename
 
     azure_subscription_id = store.varset.auth.oidc_client_id
     azure_tenant_id       = store.varset.auth.subscription_id
