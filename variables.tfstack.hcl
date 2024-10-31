@@ -19,6 +19,7 @@ variable "location" {
 
 variable "identity_token" {
   type = string
+  ephemeral = true
 }
 
 variable "azure_subscription_id" {
