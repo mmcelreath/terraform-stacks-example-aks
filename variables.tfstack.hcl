@@ -18,7 +18,7 @@ variable "location" {
 # }
 
 variable "identity_token" {
-  type = string
+  type      = string
   ephemeral = true
 }
 
