@@ -19,9 +19,9 @@ deployment "dev" {
 
     identity_token        = identity_token.azurerm.jwt
 
-    azure_subscription_id = store.varset.auth.oidc_client_id
-    azure_tenant_id       = store.varset.auth.subscription_id
-    azure_client_id       = store.varset.auth.tenant_id
+    azure_subscription_id = store.varset.auth.subscription_id
+    azure_tenant_id       = store.varset.auth.tenant_id
+    azure_client_id       = store.varset.auth.oidc_client_id
   }
 }
 
