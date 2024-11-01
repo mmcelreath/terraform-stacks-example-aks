@@ -24,10 +24,12 @@ variable "identity_token" {
 
 variable "azure_subscription_id" {
   type = string
+  ephemeral = true
 }
 
 variable "azure_tenant_id" {
   type = string
+  ephemeral = true
 }
 
 variable "azure_client_id" {
