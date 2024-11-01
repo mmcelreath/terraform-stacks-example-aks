@@ -35,4 +35,5 @@ variable "azure_tenant_id" {
 variable "azure_client_id" {
   type = string
   description = "ID of AzureAD service principal"
+  ephemeral = true
 }
