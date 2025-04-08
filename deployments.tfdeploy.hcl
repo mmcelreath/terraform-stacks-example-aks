@@ -25,6 +25,20 @@ deployment "dev" {
   }
 }
 
+deployment "prod" {
+  inputs = {
+    cluster_name          = "stacks-demo-prod"
+    kubernetes_version    = "1.30"
+    location              = "eastus2"
+
+    identity_token        = identity_token.azurerm.jwt
+
+    azure_subscription_id = store.varset.auth.subscription_id
+    azure_tenant_id       = store.varset.auth.tenant_id
+    azure_client_id       = store.varset.auth.oidc_client_id
+  }
+}
+
 # orchestrate "auto_approve" "safe_plans_dev" {
 #   check {
 #       # Only auto-approve in the development environment if no resources are being removed
