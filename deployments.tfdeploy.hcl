@@ -6,7 +6,7 @@ identity_token "azurerm" {
 }
 
 store "varset" "auth" {
-  id = "varset-PnhWJmNXFSyq88N3"
+  id = "varset-hcVDTXwTHthcj8ty"
   category = "terraform"
 }
 
@@ -39,10 +39,10 @@ deployment "prod" {
   }
 }
 
-# orchestrate "auto_approve" "safe_plans_dev" {
-#   check {
-#       # Only auto-approve in the development environment if no resources are being removed
-#       condition = context.plan.changes.remove == 0 && context.plan.deployment == deployment.dev
-#       reason = "Plan has ${context.plan.changes.remove} resources to be removed."
-#   }
-# }
+orchestrate "auto_approve" "safe_plans_dev" {
+  check {
+      # Only auto-approve in the development environment if no resources are being removed
+      condition = context.plan.changes.remove == 0 && context.plan.deployment == deployment.dev
+      reason = "Plan has ${context.plan.changes.remove} resources to be removed."
+  }
+}
